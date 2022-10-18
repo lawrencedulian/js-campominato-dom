@@ -57,10 +57,7 @@ function createSquare(innerNumber, bombsArray) {
  */
 function onClick() {
     if (this.classList.contains("bomb")) {
-      const currentSquare = document.querySelectorAll("square");
-      console.log(currentSquare);
-      // this.classList.add("bg-red");
-
+      this.classList.add("bg-red");
     } else {
       console.log(parseInt(this.textContent)); 
       this.classList.add("bg-blue");
