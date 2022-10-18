@@ -38,5 +38,9 @@ main {
 }
 
 .bg-blue {
-    background-color: blue;
+    background-color: lightblue;
+}
+
+.bg-red {
+    background-color: red;
 }
