@@ -21,7 +21,7 @@ function startGame () {
               break;
     }
     // Generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
-    const bombsArray = generateRandomOrderArray(16);
+    const bombsArray = generateRandomOrderArray(16, squareNumbers);
     console.log(bombsArray);
     gridElement.innerHTML = "";
     for (let i = 1; i <= squareNumbers; i++) {
@@ -79,10 +79,10 @@ function onClick() {
  * @param {number} arrayLength
  * @returns {Array} Array di numeri in ordine casuale di lunghezza arrayLength
  */
- function generateRandomOrderArray(arrayLength) {
+ function generateRandomOrderArray(arrayLength, squareNumbers) {
     const numbersArray = [];
     while (numbersArray.length < arrayLength) {
-      const rndNumber = getRndInteger(1, 100);
+      const rndNumber = getRndInteger(1, squareNumbers);
       if (!numbersArray.includes(rndNumber)) {
         numbersArray.push(rndNumber);
       }
